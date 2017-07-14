@@ -198,17 +198,23 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="card">
                             <div class="header">
                                 <p class="title">Timeline for current in-progress projects</p>
                             </div>
-                            <div id="chartdiv" style="width: 100%; height: 400px;"></div>
+                            <div id="chartdiv" style="width: 100%; height: 470px;"></div>
                         </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="header">
+                                <p class="title">Tasks Scheduler</p>
+                            </div>
+                            <div id='calendar' style="padding: 0;font-size: 12px;"></div>
                     </div>
                 </div>
             </div>
-        </div>
 
         </div>
 
@@ -230,5 +236,124 @@
 
     <!--  Charts Plugin -->
     <script src="assets/dashboard-bootstrap/assets/js/chartist.min.js"></script>
+
+    <!-- FullCalendar -->
+    <link href='assets/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+    <link href='assets/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <script src='assets/fullcalendar/lib/moment.min.js'></script>
+    <script src='assets/fullcalendar/lib/jquery.min.js'></script>
+    <script src='assets/fullcalendar/fullcalendar.min.js'></script>
+    <script>
+        $(document).ready(function() {
+        
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+            aspectRation: 10,
+            defaultDate: '2017-07-18',
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            eventSources: [
+    {
+        events: [ // All Wen's tasks
+            {
+                    title: '[Wen] Link Card Upgrades',
+                    start: '2017-07-01',
+                    end: '2017-07-02',
+                },
+            {
+                    title: '[Wen] ESF Access Zone',
+                    start: '2017-07-04',
+                    end: '2017-07-07'
+                },
+            {
+                    title: '[Wen] UCS Decomm',
+                    start: '2017-07-08',
+                    end: '2017-07-09'
+                },
+                {
+                    title: '[Wen] Multicast Subnet Uplife',
+                    start: '2017-07-18',
+                    end: '2017-07-19'
+                }
+        ],
+        color: '#B4897E',     // an option!
+        textColor: 'white' // an option!
+    },
+
+    {
+        events: [ // All John's tasks
+            {
+                    title: '[John] Nexus GPC 5k - B',
+                    start: '2017-07-02',
+                    end: '2017-07-03'
+                },
+            {
+                    title: '[John] Code Upgrades',
+                    start: '2017-07-05',
+                    end: '2017-07-06'
+                },
+            {
+                    title: '[John] IP Capacity Uplift',
+                    start: '2017-07-11',
+                    end: '2017-07-13'
+                }
+        ],
+        color: '#98B0AA',     // an option!
+        textColor: 'white' // an option!
+    },
+
+    {
+        events: [ // All Peter's tasks
+            {
+                    title: '[Peter] Out of Band Network',
+                    start: '2017-07-03',
+                    end: '2017-07-05'
+                },
+            {
+                    title: '[Peter] Nexus LLZ 3k Decomm',
+                    start: '2017-07-04',
+                    end: '2017-07-05'
+                },
+            {
+                    title: '[Peter] Line Card Install',
+                    start: '2017-07-12',
+                    end: '2017-07-15'
+                }
+        ],
+        color: '#ADCEB3',     // an option!
+        textColor: 'white' // an option!
+    }, {
+        events: [ // All Nicole's tasks
+            {
+                    title: '[Nicole] Nexus LLZ 3K',
+                    start: '2017-07-03',
+                    end: '2017-07-04'
+                },
+            {
+                    title: '[Nicole] DMZ Vlan Decomm',
+                    start: '2017-07-07',
+                    end: '2017-07-09'
+                },
+            {
+                    title: '[Nicole] ESF 3.0 Distribution',
+                    start: '2017-07-14',
+                    end: '2017-07-16'
+                }
+        ],
+        color: '#CED99C',     // an option!
+        textColor: 'white' // an option!
+    }
+
+]
+        });
+        
+    });
+
+    </script>
 
 </html>

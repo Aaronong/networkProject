@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='../fullcalendar.min.css' rel='stylesheet' />
+<link href='../fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2017-07-18',
+			navLinks: true, // can click day/week names to navigate views
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			eventSources: [
+    {
+        events: [ // All Wen's tasks
+            {
+					title: '[Wen] Link Card Upgrades',
+					start: '2017-07-01',
+					end: '2017-07-02',
+				},
+            {
+					title: '[Wen] ESF Access Zone',
+					start: '2017-07-04',
+					end: '2017-07-07'
+				},
+            {
+					title: '[Wen] UCS Decomm',
+					start: '2017-07-08',
+					end: '2017-07-09'
+				},
+				{
+					title: '[Wen] Multicast Subnet Uplife',
+					start: '2017-07-18',
+					end: '2017-07-19'
+				}
+        ],
+        color: '#B4897E',     // an option!
+        textColor: 'white' // an option!
+    },
+
+    {
+        events: [ // All John's tasks
+            {
+					title: '[John] Nexus GPC 5k - B',
+					start: '2017-07-02',
+					end: '2017-07-03'
+				},
+            {
+					title: '[John] Code Upgrades',
+					start: '2017-07-05',
+					end: '2017-07-06'
+				},
+            {
+					title: '[John] IP Capacity Uplift',
+					start: '2017-07-11',
+					end: '2017-07-13'
+				}
+        ],
+        color: '#98B0AA',     // an option!
+        textColor: 'white' // an option!
+    },
+
+    {
+        events: [ // All Peter's tasks
+            {
+					title: '[Peter] Out of Band Network',
+					start: '2017-07-03',
+					end: '2017-07-05'
+				},
+            {
+					title: '[Peter] Nexus LLZ 3k Decomm',
+					start: '2017-07-04',
+					end: '2017-07-05'
+				},
+            {
+					title: '[Peter] Line Card Install',
+					start: '2017-07-12',
+					end: '2017-07-15'
+				}
+        ],
+        color: '#ADCEB3',     // an option!
+        textColor: 'white' // an option!
+    }, {
+        events: [ // All Nicole's tasks
+            {
+					title: '[Nicole] Nexus LLZ 3K',
+					start: '2017-07-03',
+					end: '2017-07-04'
+				},
+            {
+					title: '[Nicole] DMZ Vlan Decomm',
+					start: '2017-07-07',
+					end: '2017-07-09'
+				},
+            {
+					title: '[Nicole] ESF 3.0 Distribution',
+					start: '2017-07-14',
+					end: '2017-07-16'
+				}
+        ],
+        color: '#CED99C',     // an option!
+        textColor: 'white' // an option!
+    }
+
+]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+</body>
+</html>
