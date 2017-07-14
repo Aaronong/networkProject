@@ -183,7 +183,7 @@ var complexity_chart = AmCharts.makeChart( "complexity", {
   "legend": {
     "horizontalGap": 10,
     "useGraphSettings": true,
-    "markerSize": 10,
+    "markerSize": 15,
     "fontSize": 9,
     "markerLabelGap": 3,
     "spacing": 0
