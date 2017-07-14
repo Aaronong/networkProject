@@ -385,210 +385,246 @@ var timeline_chart = AmCharts.makeChart("chartdiv", {
             "startDateField": "start",
             "endDateField": "end",
             "dataProvider": [{
-                "category": "VSI/PSI UCS Zone",
-                "segments": [{
-                    "start": "2017-06-16",
-                    "end": "2017-08-11"
-                }]
-            }, {
-                "category": "ESF 1.x Distro",
-                "segments": [{
-                    "start": "2017-06-21",
-                    "end": "2017-08-16"
-                }]
-            }, {
-                "category": "Access Zone Build",
-                "segments": [{
-                    "start": "2017-06-23",
-                    "end": "2017-08-18"
-                }]
-            }, {
-                "category": "Nexus GPC 5k - A",
-                "segments": [{
-                    "start": "2017-06-19",
-                    "end": "2017-08-12"
-                }]
-            }, {
-                "category": "DMZ Tower Build",
-                "segments": [{
-                    "start": "2017-06-16",
-                    "end": "2017-08-18"
-                }]
-            }, {
-                "category": "Nexus GPC 5k - B",
-                "segments": [{
-                    "start": "2017-07-01",
-                    "end": "2017-09-08"
-                }]
-            }, {
-                "category": "Out of Band Network",
-                "segments": [{
-                    "start": "2017-07-02",
-                    "end": "2017-08-30"
-                }]
-            }, {
-                "category": "Nexus GPC 5k - C",
-                "segments": [{
-                    "start": "2017-06-12",
-                    "end": "2017-08-22"
-                }]
-            }, {
-                "category": "ESF 3.0 Distribution",
-                "segments": [{
-                    "start": "2017-07-12",
-                    "end": "2017-09-30"
-                }]
-            }, {
-                "category": "Nexus LLZ 3K",
-                "segments": [{
-                    "start": "2017-07-02",
-                    "end": "2017-09-18"
-                }]
-            }, {
-                "category": "ESF L3 5k Container Build",
-                "segments": [{
-                    "start": "2017-06-23",
-                    "end": "2017-08-29"
-                }]
-            }, {
-                "category": "Data Center Backbone",
-                "segments": [{
-                    "start": "2017-06-02",
-                    "end": "2017-08-05"
-                }]
-            }, {
-                "category": "ESF 3.1 Distribution",
-                "segments": [{
-                    "start": "2017-06-20",
-                    "end": "2017-09-30"
-                }]
-            }, {
-                "category": "ESF L3 6K Container Build",
-                "segments": [{
-                    "start": "2017-06-12",
-                    "end": "2017-09-01"
-                }]
-            }, {
-                "category": "Nexus LLZ 3K - B",
-                "segments": [{
-                    "start": "2017-06-08",
-                    "end": "2017-08-08"
-                }]
-            }, {
-                "category": "ESF 3.1 Distribution - B",
-                "segments": [{
-                    "start": "2017-06-11",
-                    "end": "2017-08-30"
-                }]
-            }, {
-                "category": "ESF Access Zone",
-                "segments": [{
-                    "start": "2017-07-02",
-                    "end": "2017-09-02"
-                }]
-            }, {
-                "category": "DMZ Vlan Documentation",
-                "segments": [{
-                    "start": "2017-06-22",
-                    "end": "2017-09-12"
-                }]
-            }, {
-                "category": "UCS Decommission",
-                "segments": [{
-                    "start": "2017-06-21",
-                    "end": "2017-08-30"
-                }]
-            }, {
-                "category": "ESF 3.0 OOC Decommission",
-                "segments": [{
-                    "start": "2017-06-17",
-                    "end": "2017-09-01"
-                }]
-            }, {
-                "category": "UCS Decommission - B",
-                "segments": [{
-                    "start": "2017-07-08",
-                    "end": "2017-09-18"
-                }]
-            }, {
-                "category": "DMZ Vlan Decommission - B",
-                "segments": [{
-                    "start": "2017-07-07",
-                    "end": "2017-09-09"
-                }]
-            }, {
-                "category": "ESF Access Zone - B",
-                "segments": [{
-                    "start": "2017-06-22",
-                    "end": "2017-09-01"
-                }]
-            }, {
-                "category": "DCBB Environment Decomm",
-                "segments": [{
-                    "start": "2017-06-19",
-                    "end": "2017-08-23"
-                }]
-            }, {
                 "category": "ESF 3.0 Distro Decomm",
                 "segments": [{
                     "start": "2017-06-02",
                     "end": "2017-08-11"
                 }]
-            }, {
-                "category": "Nexus LLZ 3k Decomm",
+            }, 
+
+{
+                "category": "Data Center Backbone",
                 "segments": [{
-                    "start": "2017-06-24",
-                    "end": "2017-08-21"
+                    "start": "2017-06-02",
+                    "end": "2017-08-05"
                 }]
-            }, {
-                "category": "ESP 3.0 GPC Access Decomm",
+            }, 
+{
+                "category": "Nexus LLZ 3K - B",
                 "segments": [{
-                    "start": "2017-06-19",
-                    "end": "2017-08-19"
+                    "start": "2017-06-08",
+                    "end": "2017-08-08"
+                
                 }]
-            }, {
-                "category": "Nexus LLZ 3k Decomm - B",
+            },
+{
+                "category": "ESF 3.1 Distribution - B",
                 "segments": [{
-                    "start": "2017-07-02",
-                    "end": "2017-09-11"
+                    "start": "2017-06-11",
+                    "end": "2017-08-30"
                 }]
-            }, {
-                "category": "IP Capacity Uplift",
+            },
+
+{                "category": "ESF L3 6K Container Build",
                 "segments": [{
-                    "start": "2017-07-11",
-                    "end": "2017-08-01"
+                    "start": "2017-06-12",
+                    "end": "2017-09-01"
                 }]
-            }, {
-                "category": "Code Upgrades",
+            },
+{
+                "category": "Nexus GPC 5k - C",
                 "segments": [{
-                    "start": "2017-07-02",
-                    "end": "2017-07-31"
+                    "start": "2017-06-12",
+                    "end": "2017-08-22"
                 }]
-            }, {
-                "category": "Line Card Install",
-                "segments": [{
-                    "start": "2017-07-11",
-                    "end": "2017-07-31"
-                }]
-            }, {
-                "category": "Mulitcast Subnet Uplift",
-                "segments": [{
-                    "start": "2017-07-14",
-                    "end": "2017-08-11"
-                }]
-            }, {
-                "category": "Line Card Upgrades",
-                "segments": [{
-                    "start": "2017-06-30",
-                    "end": "2017-07-27"
-                }]
-            }, {
+            }, 
+{
                 "category": "Device Swap",
                 "segments": [{
                     "start": "2017-06-14",
                     "end": "2017-07-31"
                 }]
-            }],
+            },
+{
+                "category": "VSI/PSI UCS Zone",
+                "segments": [{
+                    "start": "2017-06-16",
+                    "end": "2017-08-11"
+                }]
+            }, 
+{
+                "category": "DMZ Tower Build",
+                "segments": [{
+                    "start": "2017-06-16",
+                    "end": "2017-08-18"
+                }]
+            }, 
+{
+                "category": "ESF 3.0 OOC Decommission",
+                "segments": [{
+                    "start": "2017-06-17",
+                    "end": "2017-09-01"
+                }]
+            }, 
+{
+                "category": "Nexus GPC 5k - A",
+                "segments": [{
+                    "start": "2017-06-19",
+                    "end": "2017-08-12"
+                }]
+            }, 
+{
+                "category": "DCBB Environment Decomm",
+                "segments": [{
+                    "start": "2017-06-19",
+                    "end": "2017-08-23"
+                }]
+            }, 
+{
+                "category": "ESP 3.0 GPC Access Decomm",
+                "segments": [{
+                    "start": "2017-06-19",
+                    "end": "2017-08-19"
+                }]
+            },
+{
+                "category": "ESF 3.1 Distribution",
+                "segments": [{
+                    "start": "2017-06-20",
+                    "end": "2017-09-30"
+                }]
+            }, 
+{
+                "category": "ESF 1.x Distro",
+                "segments": [{
+                    "start": "2017-06-21",
+                    "end": "2017-08-16"
+                }]
+            }, 
+{
+                "category": "UCS Decommission",
+                "segments": [{
+                    "start": "2017-06-21",
+                    "end": "2017-08-30"
+                }]
+            }, 
+{
+                "category": "DMZ Vlan Documentation",
+                "segments": [{
+                    "start": "2017-06-22",
+                    "end": "2017-09-12"
+                }]
+            }, 
+{
+                "category": "ESF Access Zone - B",
+                "segments": [{
+                    "start": "2017-06-22",
+                    "end": "2017-09-01"
+                }]
+            },
+{
+                "category": "Access Zone Build",
+                "segments": [{
+                    "start": "2017-06-23",
+                    "end": "2017-08-18"
+                }]
+            }, 
+{
+                "category": "ESF L3 5k Container Build",
+                "segments": [{
+                    "start": "2017-06-23",
+                    "end": "2017-08-29"
+                }]
+            }, 
+{
+                "category": "Nexus LLZ 3k Decomm",
+                "segments": [{
+                    "start": "2017-06-24",
+                    "end": "2017-08-21"
+                }]
+            },
+{
+                "category": "Line Card Upgrades",
+                "segments": [{
+                    "start": "2017-06-30",
+                    "end": "2017-07-27"
+                }]
+            },
+{
+                "category": "Nexus GPC 5k - B",
+                "segments": [{
+                    "start": "2017-07-01",
+                    "end": "2017-09-08"
+                }]
+            }, 
+{
+                "category": "Out of Band Network",
+                "segments": [{
+                    "start": "2017-07-02",
+                    "end": "2017-08-30"
+                }]
+            }, 
+{
+                "category": "Nexus LLZ 3K",
+                "segments": [{
+                    "start": "2017-07-02",
+                    "end": "2017-09-18"
+                }]
+            }, 
+{
+                "category": "ESF Access Zone",
+                "segments": [{
+                    "start": "2017-07-02",
+                    "end": "2017-09-02"
+                }]
+            }, 
+{
+                "category": "Code Upgrades",
+                "segments": [{
+                    "start": "2017-07-02",
+                    "end": "2017-07-31"
+                }]
+            },
+{
+                "category": "Nexus LLZ 3k Decomm - B",
+                "segments": [{
+                    "start": "2017-07-02",
+                    "end": "2017-09-11"
+                }]
+            },
+{
+                "category": "DMZ Vlan Decommission - B",
+                "segments": [{
+                    "start": "2017-07-07",
+                    "end": "2017-09-09"
+                }]
+            },
+{
+                "category": "UCS Decommission - B",
+                "segments": [{
+                    "start": "2017-07-08",
+                    "end": "2017-09-18"
+                }]
+            }, 
+{
+                "category": "IP Capacity Uplift",
+                "segments": [{
+                    "start": "2017-07-11",
+                    "end": "2017-08-01"
+                }]
+            },
+{
+                "category": "Line Card Install",
+                "segments": [{
+                    "start": "2017-07-11",
+                    "end": "2017-07-31"
+                }]
+            },
+{
+                "category": "ESF 3.0 Distribution",
+                "segments": [{
+                    "start": "2017-07-12",
+                    "end": "2017-09-30"
+                }]
+            },  
+{
+                "category": "Mulitcast Subnet Uplift",
+                "segments": [{
+                    "start": "2017-07-14",
+                    "end": "2017-08-11"
+                }]
+            }
+          ],
 
             "chartCursor": {
                 "valueBalloonsEnabled": false,
