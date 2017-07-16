@@ -168,7 +168,7 @@
 //					parse(graph, 'fileio.txt');
 
                     // Loads the mxGraph file format (XML file)
-                    read(graph, './test.xml');
+                    read(graph, './engineerFlow.xml');
 
 
                 }
@@ -197,60 +197,6 @@
                 {
                     mxUtils.alert("something changed");
                 });
-
-
-                graph.dblClick = function(evt, cell)
-                {
-                    var mxe = new mxEventObject(mxEvent.DOUBLE_CLICK, 'event', evt, 'cell', cell);
-                    this.fireEvent(mxe);
-
-                    //If Vertex, only process clicks on the current node
-                    if (cell.isVertex()) {
-                        if (isActiveCell(cell.getAttribute("current") === "1")) {
-                            mxUtils.alert('Cell '+(cell.customId || cell.getId()) + " is active");
-                        } else {
-                            mxUtils.alert('Cell '+(cell.customId || cell.getId()) + " is passive");
-                        }
-                    } else if (cell.isEdge()) {
-
-                        if (isActiveCell(cell.source)) {
-                            console.log("before target = ");
-                            console.log(cell.target);
-                            console.log("before source = ");
-                            console.log(cell.source);
-                            processTrigger(cell.getAttribute("trigger"));
-                            graph.getModel().beginUpdate();
-
-                            try {
-                                activateCell(cell.target);
-                                deactivateCell(cell.source);
-
-                                //Update View
-                                graph.getView().clear(cell.target, false, false);
-                                graph.getView().clear(cell.source, false, false);
-                                graph.getView().validate();
-                            }
-                            finally {
-                                //Update Attributes
-                                graph.getModel().endUpdate();
-                            }
-                            console.log("after target = ");
-                            console.log(cell.target);
-                            console.log("after source = ");
-                            console.log(cell.source);
-                        }
-                    }
-
-
-//                    mxUtils.alert('Show properties for cell '+(cell.customId || cell.getId())+ cell.isVertex() + cell.getAttribute("current") + cell.source + cell.target);
-//                    if (this.isEnabled() &&
-//                        !mxEvent.isConsumed(evt) &&
-//                        !mxe.isConsumed() &&
-//                        cell != null)
-//                    {
-//                        mxUtils.alert('Show properties for cell '+(cell.customId || cell.getId()));
-//                    }
-                };
 
                 if (mxClient.IS_QUIRKS)
                 {
@@ -313,16 +259,14 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-globe"></i>
                             <b class="caret hidden-sm hidden-xs"></b>
-                            <span class="notification hidden-sm hidden-xs">5</span>
+                            <span class="notification hidden-sm hidden-xs">0</span>
                             <p class="hidden-lg hidden-md">
                                 5 Notifications
                                 <b class="caret"></b>
                             </p>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">2 build tasks pending assignment</a></li>
-                            <li><a href="#">1 pending Q&A</a></li>
-                            <li><a href="#">3 deadlines approaching</a></li>
+                            <li><a href="#">You have no new notifications </a></li>
                         </ul>
                     </li>
                     <li>
@@ -360,7 +304,7 @@
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            John Doe <span class="caret"></span>
+                            Engineer <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
@@ -455,57 +399,27 @@
         <div data-role="main" class="ui-content">
 
 
-            <div data-role="popup" id="myPopup2" class="ui-content" style="min-width:450px; max-width: 450px;">
+            <div data-role="popup" id="myPopup2" class="ui-content" style="min-width:450px;">
                 <form method="post" action="/action_page_post.php">
                     <div>
 
-                        <h3>View Project Emails</h3>
-                        <label for="QnA Subject">Subject:</label>
-                        <select name="cars" id="Email Subject" onchange="emaillist()">
-                            <option disabled selected value> -- select an option -- </option>
-                            <option value="1">Request subnet access (Unanswered)</option>
-                            <option value="2">Cisco is coming (Unanswered)</option>
-                            <option value="3">Network config delay</option>
-                            <option value="4">Firewall config progress</option>
-                        </select>
+                        <h3>Project Emails</h3>
 
+                        <label for="ProjectName2" class="ui-hidden-accessible">ProjectName:</label>
+                        <input type="text" name="user" id="ProjectName2" placeholder="Project Name">
+                        <label for="WRM #2" class="ui-hidden-accessible">WRM #:</label>
+                        <input type="text" name="user" id="WRM #2" placeholder="WRM #">
 
-                        <div id="Email Content"></div>
+                        <label for="Description of Engagement2">Description of Engagement:</label>
+                        <textarea rows="10" cols="50" id="Description of Engagement2" name="comment">Enter text here...</textarea>
+                        <label for="log2">Send request email to Resource Manager</label>
+                        <input type="checkbox" name="login" id="log2" value="1" data-mini="true">
+                        <input type="submit" data-inline="true" value="Submit Request">
                     </div>
                 </form>
             </div>
         </div>
         <!-- Popup Div Ends Here -->
-        </div>
-
-        <div class="col-lg-2">
-            <!--Popup button-->
-            <a href="#myPopup5" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-edit ui-btn-icon-left">Project Forms</a>
-            <!-- Popup Div Starts Here -->
-            <div data-role="main" class="ui-content">
-
-
-                <div data-role="popup" id="myPopup5" class="ui-content" style="min-width:450px; max-width: 450px;">
-                    <form method="post" action="/action_page_post.php">
-                        <div>
-
-                            <h3>View Project Forms</h3>
-                            <label for="QnA Subject">:</label>
-                            <select name="cars" id="Email Subject3" onchange="emaillist()">
-                                <option disabled selected value> -- select an option -- </option>
-                                <option value="1">Request subnet access (Unanswered)</option>
-                                <option value="2">Cisco is coming (Unanswered)</option>
-                                <option value="3">Network config delay</option>
-                                <option value="4">Firewall config progress</option>
-                            </select>
-
-
-                            <div id="Email Content3"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- Popup Div Ends Here -->
         </div>
 
         <div class="col-lg-2">
@@ -520,9 +434,8 @@
                             <h3>Project Documents</h3>
                             <table class="table">
                                 <tr><td><a><img src="./images/Word-icon.png" style="width:32px;height:32px;"> &nbsp;&nbsp;dc_project_plan_version_2_Q12017.docx</a></td></tr>
-                                <tr><td><a><img src="./images/excel-icon.png" style="width:39px;height:39px;"> network_configuration_1_03072017.xls</a></td></tr>
-                                <tr><td><a><img src="./images/ppt-icon.png" style="width:32px;height:32px;"> &nbsp;&nbsp;dc_project_overview_Q12017.ppt</a></td></tr>
-                                <tr><td><a><img src="./images/plus-icon.png" style="width:32px;height:32px;"> &nbsp;&nbsp;Upload New Document </a></td></tr>
+                                <tr><td><a><img src="./images/excel-icon.png" style="width:40px;height:40px;"> network_configuration_1_03072017.xls</a></td></tr>
+                                <tr><td><a><img src="./images/ppt-icon.png" style="width:40px;height:40px;"> dc_project_overview_Q12017.ppt</a></td></tr>
 
                             </table>
                         </div>
@@ -613,44 +526,6 @@
                 "<h5>To: <strong>Engineer</strong></h5>" +
                 "<p>Question: </p><p style='background-color: #f1f1f1'>When will the firewall configuration be completed?</p>" +
                 "<p>Answer: </p><p style='background-color: #f1f1f1'>Configurations will be complete by Wednesday, July 19.</p>";
-        }
-    }
-
-    function emaillist(){
-        var x = document.getElementById("Email Subject").value;
-        console.log( "You selected: " + x);
-        if (x === '1') {
-            document.getElementById("Email Content").innerHTML =
-                "<h5>From: <strong>Engineer</strong></h5>" +
-                "<h5>To: <strong>Project Manager</strong></h5>" +
-                "<p>Body: </p><p style='background-color: #f1f1f1'>Can we request access to set up subnet for DC2? Vendor is delaying, kindly escalate. </p>";
-        }
-        if (x === '2') {
-            document.getElementById("Email Content").innerHTML =
-                "<h5>From: <strong>Engineer</strong></h5>" +
-                "<h5>To: <strong>Project Manager</strong></h5>" +
-                "<p>Body: </p><p style='background-color: #f1f1f1'>Cisco is coming down to meet engineering team to discuss some flaws. Can PMO send a representative to attend? May conflict with other dependencies</p>";
-        }
-        if (x === '3') {
-            document.getElementById("Email Content").innerHTML =
-                "<h5>From: <strong>Engineer</strong></h5>" +
-                "<h5>To: <strong>Project Manager</strong></h5>" +
-                "<p>Body: </p><p style='background-color: #f1f1f1'>P1 issue last Tuesday. Need to use EPV, expecting delay in network config. Will impact server and storage team. Estimate to add 3-5 working days to project task.</p>" +
-                "<p>Attachments: </p>" +
-                "<table class=\"table\">" +
-                "<tr><td><a><img src=\"./images/Word-icon.png\" style=\"width:32px;height:32px;\"> &nbsp;&nbsp;dc_project_plan_version_2_Q12017.docx</a></td></tr>" +
-                "<tr><td><a><img src=\"./images/ppt-icon.png\" style=\"width:32px;height:32px;\"> dc_project_overview_Q12017.ppt</a></td></tr>" +
-                "</table>";
-        }
-        if (x === '4') {
-            document.getElementById("Email Content").innerHTML =
-                "<h5>From: <strong>Resource Manager</strong></h5>" +
-                "<h5>To: <strong>Engineer</strong></h5>" +
-                "<p>Body: </p><p style='background-color: #f1f1f1'>When will the firewall configuration be completed?</p>" +
-                "<p>Attachments: </p>" +
-                "<table class=\"table\">" +
-                "<tr><td><a><img src=\"./images/excel-icon.png\" style=\"width:39px;height:39px;\"> network_configuration_1_03072017.xls</a></td></tr>" +
-                "</table>";
         }
     }
 
