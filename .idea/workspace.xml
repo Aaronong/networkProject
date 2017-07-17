@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c5af91c-3efa-48c3-ad18-e3821b6b974c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/assets/js/chartsEngineer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/dashboardEngineer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/engineerFlow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/war/flowdisplayengineer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/assets/js/charts.js" afterPath="$PROJECT_DIR$/war/assets/js/charts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/flowdisplay.html" afterPath="$PROJECT_DIR$/war/flowdisplay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/war/main.html" afterPath="$PROJECT_DIR$/war/main.html" />
-    </list>
+    <list default="true" id="9c5af91c-3efa-48c3-ad18-e3821b6b974c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
